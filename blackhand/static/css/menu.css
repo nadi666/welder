@@ -1,0 +1,540 @@
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-track{
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #3d3737;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+header{
+    background-color: #000;
+    width: 100%;
+    height: 70px;
+}
+.main-item{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+    height: 66px;
+    padding: 0 20px;
+    margin-left: 147px;
+    align-items: center;
+    text-align: center;
+    background: black;
+}
+.logo{
+    width: 199px;
+    height: 57px;
+}
+.main-item .logo h1{
+    font-family: "Cormorant Upright";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 57.2px;
+    letter-spacing: 4%;
+    color: white;
+}
+.main-item nav{
+    display: flex;
+    width: 450px;
+    height: 28px;  
+}
+.main-item nav li {
+    list-style: none;
+    padding-right: 33px;
+}
+.main-item nav li ::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #DCCA87;
+    transition: width .4s ease-in-out;
+}
+.main-item nav li a:hover::after,
+.main-item nav li a:focus::after{
+    width: 100% ;
+}
+.main-item nav li a{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 4%;
+    text-decoration: none;
+    color: #fff;
+}
+.main-item .b-call{
+    text-decoration: none;
+    color: white;
+}
+.main-item .b-call:hover{
+    border: 1px solid #DCCA87;
+    padding: 7px 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.about{
+    height: 800px;
+    width: 100%;
+    position: relative;
+}
+.about::before{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0, 0, 0, .7);
+}
+.about .about-content{
+    width: 1300px;
+    height: 703px;
+    position: relative;
+    top: 38px;
+    left: 314px;
+}
+.about .about-content .title{
+    width: 428px;
+    height: 415px;
+    position: absolute;
+    top: 142px;
+    left: 423px;
+    font-size: 300px;
+    color: rgb(60, 60, 60);
+    letter-spacing: 41px;
+}
+.about .about-content .left-block{
+    width: 500px;
+    height: 292px;
+    position: absolute;
+    display: block;
+    top: 195px;
+    left: 64px;
+    z-index: 2;
+}
+.about .about-content .left-block h3{
+    font-size: 64px;
+    font-family: 'Cormorant Upright';
+    font-weight: 600;
+    line-height: 83.2px;
+    color: #DCCA87;
+    text-align: right;
+}
+.about .about-content .left-block h3::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 85px;
+    left: 477px;
+    width: 22px;
+    height: 2px;
+    background-color: #DCCA87;
+}
+.about .about-content .left-block h3::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 6px;
+    left: 459px;
+    top: 82px;
+    border-radius: 50px;
+    border: 1px solid #DCCA87;
+}
+.about .about-content .left-block p{
+    font-family:0' Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    margin-top: 20px;
+    color: #aaaa;
+}
+.about .about-content .left-block button{
+    width: 157px;
+    height: 44px;
+    background: #DCCA87;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 343px;
+}
+.about .about-content .left-block a button{
+    color: #000;
+    font-family: "Cormorant Upright";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+.about .about-content .left-block button:hover{
+    background-color: #2E2B2C;
+    border: 1px solid black;
+    color: #DCCA87;
+    transition: .5s;
+}
+.box{
+    width: 293px;
+    height: 611px;
+    position: absolute;
+    top: 19px;
+    left: 495px;
+    opacity: .7;
+    background-size: cover;
+}
+.background-tint {
+    background-color: rgba(0,0,0,.5);
+    background-blend-mode: multiply;
+}
+.about .about-content .right-block{
+    width: 500px;
+    height: 292px;
+    position: absolute;
+    display: block;
+    top: 195px;
+    right: 78px;
+    z-index: 2;
+}
+.about .about-content .right-block h3{
+    font-size: 64px;
+    font-family: 'Cormorant Upright';
+    font-weight: 600;
+    line-height: 83.2px;
+    color: #DCCA87;
+}
+.about .about-content .right-block h3::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 85px;
+    left: 0px;
+    width: 22px;
+    height: 2px;
+    background-color: #DCCA87;
+}
+.about .about-content .right-block h3::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 6px;
+    left: 22px;
+    top: 82px;
+    border-radius: 50px;
+    border: 1px solid #DCCA87;
+}
+.about .about-content .right-block p{
+    font-family: ' Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    margin-top: 20px;
+    color: #aaaa;
+}
+.about .about-content .right-block button{
+    width: 157px;
+    height: 44px;
+    background: #DCCA87;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+}
+.about .about-content .right-block a button{
+    color: #000;
+    font-family: "Cormorant Upright";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+.about .about-content .right-block button:hover{
+    background-color: #2E2B2C;
+    border: 1px solid black;
+    color: #DCCA87;
+    transition: .5s;
+}
+.gallery {
+    background-color: #000;
+    padding-bottom: 162px;
+}
+.gallery .title {
+    position: relative;
+}
+.gallery .title h2{
+    font-family: "Cormorant Upright";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 83px;
+    letter-spacing: 0.03em;
+    color: #DCCA87;
+    text-align: center;
+    padding: 70px 0 50px 0;
+}
+.gallery .filter {
+    width: 653px;
+    display: block;
+    margin: auto;
+}
+.gallery .filter form select{
+    background: transparent;
+    width: 400px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 7px;
+}
+.gallery .filter form select option{
+    background-color: transparent;
+    color: black;
+}
+.gallery .filter input[type="radio"]{
+    display: none;
+}
+.gallery .filter label {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}
+.gallery .filter label:hover {
+    background-color: #e6e6e6;
+}
+.gallery .filter button[type="submit"] {
+        margin-top: 10px;
+    display: block;
+    position: relative;
+    top: -48px;
+    right: -512px;
+    padding: 7px 13px;
+    border: 1px solid #DCCA87;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.gallery .image-container {
+    width: 1400px;   
+    margin: auto;
+    columns: 4;
+    column-gap: 20px;
+  }
+  .gallery .image-container .card {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+  .gallery .image-container .card img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+.gallery .image-container .card b{
+    font-size: 18px;
+    font-weight: 400;
+    color: #aaa;
+    font-family: 'Open Sans';
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+}
+.gallery .image-container .card h3{
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+    font-family: 'Open Sans';
+    display: block;
+}
+.gallery .image-container .card p{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+}
+.gallery .image-container .card span{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 24px;
+    color: #aaaa;
+    display: block;
+    text-align: right;
+}
+.footer{
+    width: 100%;
+    height: 410px;
+    position: relative;
+}
+.footer::before{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0, 0, 0, .6);
+}
+.footer .contact-base{
+    width: 1800px;
+    height: 360px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+.footer .contact-base .contact-conteiner{
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footer .contact-base .contact-conteiner .contact-us{
+    width: 305px;
+    height: 158px;
+}
+.footer .contact-base .contact-conteiner .contact-us h2{
+    font-family: "Cormorant Upright";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #DCCA87;
+}
+.footer .contact-base .contact-conteiner .contact-us p{
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #aaa;
+}
+.footer .contact-base .contact-conteiner .logo {
+    width: 438px;
+    height: 236px;
+    position: relative;
+    top: -38px;
+    right: 79px;
+}
+.footer .contact-base .contact-conteiner .logo .image{
+    width: 150px;
+    height: 150px;
+    rotate: -32deg;
+    position: absolute;
+    top: -57px;
+    right: 154px;
+    opacity: .4;
+}
+.footer .contact-base .contact-conteiner .logo h1{
+    position: relative;
+    font-family: "Cormorant Upright";
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 83px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #DCCA87;
+}
+.footer .contact-base .contact-conteiner .logo .p{
+    font-family: "Open Sans";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    left: 175px;
+}
+.footer .contact-base .contact-conteiner .logo p{
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.footer .contact-base .contact-conteiner .logo p::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 192px;
+    width: 22px;
+    height: 2px;
+    background-color: #DCCA87;
+    }
+    .footer .contact-base .contact-conteiner .logo p::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 6px;
+    left: 214px;
+    top: 57px;
+    border-radius: 50px;
+    border: 1px solid #DCCA87;
+}
+.footer .contact-base .contact-conteiner .logo .icons{
+    width: 104px;
+    height: 24px;
+    margin: 20px auto;
+}
+.footer .contact-base .contact-conteiner .logo .icons a{
+    padding-left: 10px;
+}
+.footer .contact-base .contact-conteiner .hours{
+    width: 203px;
+    height: 186px;
+}
+.footer .contact-base .contact-conteiner .hours h2{
+    font-family: "Cormorant Upright";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color:  #F5EFDB;
+}
+.footer .contact-base .contact-conteiner .hours p{
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #aaa;
+}

@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Black Hand</title>
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+	integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+		integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+	<script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+	<main>
+        <header class="header">
+            <div class="main-item">
+                <div class="logo"><h1>Black Hand</h1> <img style="position: absolute; width: 50px; top: 5px; left: 217px; rotate: -23deg;" src="{% static '/media/icons8-вся-рука-100 (1).png' %}" alt=""></div>
+                <nav class="nav">
+                    <li><a href="{% url 'hand:home' %}">Домой</a></li>
+                    <li><a href="{% url 'hand:menu' %}">Меню</a></li>
+                    <li><a href="#contacts">Наши контакты</a></li>
+                    <li><a href="https://www.instagram.com/free.welder/">Блог</a></li>
+                </nav>
+                <a class="b-call" href="tel: +996501000103" class="phone1">Связаться с нами</a>
+            </div>
+            <div class="article">
+				<div class="content">
+					<h1>Metal Mastery: Weld. Create. Excel.</h1>
+					<p>Преодолевая границы традиций, мы сочетаем мастерство ручной работы с современными технологиями обработки металла, такими как плазменная и лазерная резка, чтобы придать нашим изделиям внушительный вид и прочность. Воплотите свои мечты в реальность с BlackHand – где каждое изделие становится уникальным и неповторимым символом вашего стиля.</p>
+					<img src="https://img.freepik.com/premium-photo/arc-welding-in-construction-area-industrial-concept_251006-2611.jpg" alt="img" class="image">
+					<button><a href="{% url 'hand:menu' %}">Изучить Меню</a></button>
+				</div>
+			</div>
+        </header>
+    </main>
+	<section class="service">
+		<div class="content">
+			<div class="content-items">
+				<div class="item">
+					<img class="image" src="{% static '/media/icons8-пружина-50.png' %}" alt="">
+					<h3>Работа с металлом</h3>
+					<p>Высокотехнологичная обработка металла: профессиональные методы, надежность и качество для успешных проектов и инноваций.</p>
+				</div>
+				<div class="item">
+					<img class="image" style="width: 65px; height: 65px; " src="{% static '/media/icons8-наденьте-маску-для-сварки-100.png' %}" alt="">
+					<h3 style="position: absolute; top: 112px; margin: auto 65px;">Сварочные работы</h3>
+					<p style="margin-top: 36px">Профессиональная сварка: надежные соединения, высокоточность и качество исполнения. Ваши проекты - наша гарантия успеха.</p>
+				</div>
+				<div class="item">
+					<img class="image" src="{% static '/media/icons8-вырезать-50.png' %}" alt="">
+					<h3>Плазменная резка</h3>
+					<p>ЧПУ и точность: перфекционизм в плазменной резке. Создание выдающихся деталей через программное моделирование и высокоточное исполнение.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="customers">
+		<div class="customers-content">
+			<div class="content">
+				<span>Показания</span>
+				<h2>Счастливые клиенты</h2>
+			</div>
+			<div class="itemsw">
+				<div class="customer-item">
+					<img src="{% static '/media/Mask Group.png' %}" alt="">
+					<div class="group-image">
+						<img src="{% static '/media/кавычки.svg' %}" alt="">
+					</div>
+					<div class="customer-info">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nostrum quisquam atque temporibus similique eaque numquam sit recusandae! Quibusdam, ut?</p>
+						<h3><i>name</i></h3>
+						<b><i>клиент</i></b>
+					</div>
+				</div>
+				<div class="customer-item">
+					<img src="{% static '/media/Mask Group-1.png' %}" alt="">
+					<div class="group-image">
+						<img src="{% static '/media/кавычки.svg' %}" alt="">
+					</div>
+					<div class="customer-info">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nostrum quisquam atque temporibus similique eaque numquam sit recusandae! Quibusdam, ut?</p>
+						<h3><i>name</i></h3>
+						<b><i>customer</i></b>
+					</div>
+				</div>
+				<div class="customer-item">
+					<img src="{% static '/media/Mask Group-2.png' %}" alt="">
+					<div class="group-image">
+						<img src="{% static '/media/кавычки.svg' %}" alt="">
+					</div>
+					<div class="customer-info">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nostrum quisquam atque temporibus similique eaque numquam sit recusandae! Quibusdam, ut?</p>
+						<h3><i>name</i></h3>
+					</div>
+				</div>
+				<div class="customer-item">
+					<img src="{% static '/media/Mask Group-3.png' %}" alt="">
+					<div class="group-image">
+						<img src="{% static '/media/кавычки.svg' %}" alt="">
+					</div>
+					<div class="customer-info">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nostrum quisquam atque temporibus similique eaque numquam sit recusandae! Quibusdam, ut?</p>
+						<h3><i>имя</i></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="menu" class="gallery" style="background-image: url('/static/media/Mask\ Group\ \(3\).png');">
+		<div class="gallery-image">
+			<img src="{% static '/media/icons8-отвертка-80.png'%}" alt="img" class="first-image">
+			<img src="{% static '/media/icons8-отвертка-80.png'%}" alt="img" class="second-image">
+		</div>
+		<div class="conteiner">
+			<div class="left-container">
+				<span>Instagram</span>
+				<h3><i>Фото галерея</i></h3>
+				<p>Откройте дверь в мир наших товаров и акций - нажмите на изображение для входа на нашу социальную страницу!</p>
+				<a href="{% url 'hand:menu' %}"><button>Меню</button></a>
+			</div>
+		</div>
+		<div class="owl-carousel" >
+			<div class="card">
+				<div class="card-image">
+					<img src="{% static '/media/order5.jpg' %}" alt="img">
+					<div class="overlay">
+						<a href="https://www.instagram.com/free.welder/" class="icon"><img src="{% static '/media/instagram.svg' %}" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-image">
+					<img src="{% static '/media/order4.jpg' %}" alt="img">
+					<div class="overlay">
+						<a href="https://www.instagram.com/free.welder/" class="icon"><img src="{% static '/media/instagram.svg' %}" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-image">
+					<img src="{% static '/media/order3.jpg' %}" alt="img">
+					<div class="overlay">
+						<a href="https://www.instagram.com/free.welder/" class="icon"><img src="{% static '/media/instagram.svg' %}" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-image">
+					<img src="{% static '/media/order2.jpg' %}" alt="img">
+					<div class="overlay">
+						<a href="https://www.instagram.com/free.welder/" class="icon"><img src="{% static '/media/instagram.svg' %}" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-image">
+					<img src="{% static '/media/order1.jpg' %}" alt="img">
+					<div class="overlay">
+						<a href="https://www.instagram.com/free.welder/" class="icon"><img src="{% static '/media/instagram.svg' %}" alt=""></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="questions">
+        <div class="conteiner">
+            <h1><i>Часто задаваемые<span> вопросы...</span></i></h1>
+            <div class="block-questions">
+                <div class="left">
+                    <div class="question">
+                        <h2>Как заказать?</h2>
+                        <p class="answer">Заказы осуществляются по приезде к нам в офис или в сварочный цех. Там вы сможете обсудить с мастером все детали дальнейшей работы.</p>
+		                <div class="circle"></div>
+                    </div>
+                    <div class="question">
+                        <h2>Можно ли сделать под ключ?</h2>
+                        <p class="answer">Да, мы можем выполнить деталь под ключ, обеспечив полный цикл производства от проектирования до готовой продукции.</p>
+		                <div class="circle"></div>
+                    </div>
+                    <div class="question">
+                        <h2>Что на счёт доставки?</h2>
+                        <p class="answer">Мы предоставляем доставку в пределах города, а также в радиусе 15 километров от города как на восток, так и на запад за дополнительную плату.</p>
+		                <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="question">
+                        <h2>Как я могу оплатить?</h2>
+                        <p class="answer">Оплата может быть произведена наличными или по карте как сразу после заказа, так и по завершении работы и передаче готовой продукции.</p>
+		                <div class="circle"></div>
+                    </div>
+					<div class="question">
+                        <h2>Где вы находитесь?</h2>
+                        <p class="answer">Наш офис находится по адресу: ....... <br>Наш сварочный цех находится по адресу: г.Каркол, ул.Тюпская 1</p>
+		                <div class="circle"></div>
+                    </div>
+					<div class="question">
+                        <h2>Не нашли своего вопроса?</h2>
+                        <p class="answer">Вы можете задать свой вопрос <a href="#" id="showPopup" style="font-size: 20px; font-weight: 400; text-decoration: none; border-bottom: 1px solid #DCCA87; color: #fff;">здесь</a></p>
+		                <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+			<div class="pop-up" id="popup">
+				<div class="window">
+				  <h2>Задать вопрос</h2>
+				  <div class="enter">
+					<input type="email" placeholder="Введите ваш email">
+					<input style="width: 400px; height: 100px;" type="text" placeholder="Введите ваш вопрос">
+				  </div>
+				  <button>Отправить</button>
+				</div>
+			  </div>
+        </div>
+    </section>
+	<section class="contacts" id="contacts">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2010.6460174138663!2d78.3818724!3d42.5066897!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38865fff09c3a8a1%3A0xe5908bd079ccb0bc!2z0KHQstCw0YDQvtGH0L3Ri9C5INGG0LXQvdGC0YAg0JrQsNGA0LDQutC-0Ls!5e1!3m2!1sru!2skg!4v1707458807553!5m2!1sru!2skg" width="100%" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<div class="contacts_block">
+			<h2 class="contact_title">Контакты</h2>
+			<div class="address">
+				<img style="width: 24px;" src="{% static '/media/Location.png' %}" alt="img">
+				<div class="address_text">
+					<p class="p">Наш адрес:</p>
+					<h3 class="h3">г. Каракол, ул. Тюпская 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://yandex.ru/maps/-/CDBZJF45" class='coordinates'>coordinates</a></h3>
+				</div>
+			</div>
+			<div class="address under-line">
+				<img style="width: 24px;" src="{% static '/media/icons8-опции-почты-50.png' %}" alt="img">
+				<div class="address_text">
+					<p class="p">Наши номера для вопросов:</p>
+					<a class="a" href="tel: +996501000103" class="phone1">+996501000103</a><br>
+					<a class="a" href="tel: +996501000103" class="phone1">+996704165656</a><br>
+				</div>
+			</div>
+			<div class="submit_networks">
+				<div class="submit-block">
+					<a class="qwe" href="#">Запланировать встречу</a>
+					<div class="tel-number">
+						<h2>+996 501 000 103</h2>
+						<p>Звоните или оставляйте заявку</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer" style="background-image: url('/static/media/black-fone.png');">
+		<div class="contact-base">
+			<div class="contact-conteiner">
+				<div class="contact-us">
+					<h2><i>Связаться с нами</i></h2>
+					<P>+996 501 000 103</P>
+					<P>+996 704 165 656</P>
+				</div>
+				<div class="logo">
+					<img class="image" src="{% static '/media/icons8-вся-рука-100 (1).png' %}" alt="hand"/>
+					<h1><i>Black Hand</i></h1>
+					<b class="p"><i>karakol</i></b>
+					<p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+					<div class="icons">
+						<a href="https://www.instagram.com/free.welder/"><img width="20" height="20" src="{% static '/media/instagram.svg' %}" alt="img"></a>
+						<a href="https://t.me/+996501000103"><img width="20" height="20" src="{% static '/media/telegram.png' %}" alt="img"></a>
+						<a href="https://web.whatsapp.com/+996501000103"><img width="20" height="20" src="{% static '/media/whatsapp.png' %}" alt="img"></a>
+					</div>
+				</div>
+				<div class="hours">
+					<h2><i>Рабочие часы</i></h2>
+					<p>Monday-Friday <br>08:30 am -07:00 pm</p>
+					<p>Saturday-Sunday <br>08:30am -06:00 pm</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+        const circles = document.querySelectorAll('.circle');
+        circles.forEach((circle) => {
+            circle.addEventListener('click', () => {
+                const question = circle.parentElement;
+                const answer = question.querySelector('.answer');
+
+                if (answer.style.height === '0px') {
+                    answer.style.height = answer.scrollHeight + 'px';
+                    circle.style.transform = 'rotate(45deg)';
+                } else {
+                    answer.style.height = '0px';
+                    circle.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+		document.addEventListener("DOMContentLoaded", function() {
+			var showPopupButton = document.getElementById("showPopup");
+			var popup = document.getElementById("popup");
+
+		showPopupButton.addEventListener("click", function(event) {
+			event.preventDefault();
+			popup.style.display = "block";
+		});
+
+		document.addEventListener("click", function(event) {
+			if (!popup.contains(event.target) && event.target !== showPopupButton) {
+				popup.style.display = "none";
+				}
+			});
+		});
+    </script>
+</body>
+</html>

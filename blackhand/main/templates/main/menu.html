@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hand - Menu</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="main-item">
+                <div class="logo"><h1>Black Hand</h1> <img style="position: absolute; width: 50px; top: 5px; left: 217px; rotate: -23deg;" src="{% static '/media/icons8-вся-рука-100 (1).png' %}" alt=""></div>
+                <nav class="nav">
+                    <li><a href="{% url 'hand:home' %}">Домой</a></li>
+                    <li><a href="{% url 'hand:menu' %}">Меню</a></li>
+                    <li><a href="#contacts">Наши контакты</a></li>
+                    <li><a href="https://www.instagram.com/free.welder/">Блог</a></li>
+                </nav>
+                <a class="b-call" href="tel: +996501000103" class="phone1">Связаться с нами</a>
+            </div>
+        </header>
+    </main>
+    <section class="about" style="background-image: url('/static/media/black-fone.png');">
+        <div class="about-content">
+            <h2  class="title">BH</h2>
+            <div class="left-block">
+                <h3>О Нас</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, fugit quasi! Vitae est fuga, deserunt qui voluptas autem consectetur iure!</p>
+                <a href=""><button>Задать вопрос</button></a>
+            </div>
+            <div class="box background-tint" style="background-image: url('/static/media/istockphoto-160057330-1024x1024.jpg');"></div>   
+            <div class="right-block">
+                <h3>Наша История</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, fugit quasi! Vitae est fuga, deserunt qui voluptas autem consectetur iure!</p>
+                <a href=""><button>Задать вопрос</button></a>
+            </div>
+        </div> 
+    </section>
+    <section class="gallery">
+        <div class="title"><h2><i>Наши Работы</i></h2>
+            <div class="filter">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form}}
+                    <button type="submit">Фильтр</button>
+                </form>
+            </div>
+            <div class="image-container" style="color: white;">
+                {% for product in products %}
+                    {% if product in products %}
+                        <div class="card">
+                            <img src="{{ product.img.url }}" alt="img">
+                            <b>{{ product.catalog }}</b>
+                            <h3>{{ product.title }}</h3>
+                            <p>{{ product.description }}</p>
+                            <span>Цена: {{ product.price }} c</span>
+                        </div>
+                    {% else %} <p>Ничего нет</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+	<footer class="footer" id="contacts" style="background-image: url('/static/media/black-fone.png');">
+		<div class="contact-base">
+			<div class="contact-conteiner">
+				<div class="contact-us">
+					<h2><i>Связаться с нами</i></h2>
+					<P>+996 501 000 103</P>
+					<P>+996 704 165 656</P>
+				</div>
+				<div class="logo">
+					<img class="image" src="{% static '/media/icons8-вся-рука-100 (1).png' %}" alt="hand">
+					<h1><i>Black Hand</i></h1>
+					<b class="p"><i>karakol</i></b>
+					<p>"The best way to find yourself is to lose yourself in the service of others.”</p>
+					<div class="icons">
+						<a href="https://www.instagram.com/free.welder/"><img width="20" height="20" src="{% static '/media/instagram.svg' %}" alt="img"></a>
+						<a href="https://t.me/+996501000103"><img width="20" height="20" src="{% static '/media/telegram.png' %}" alt="img"></a>
+						<a href="https://web.whatsapp.com/+996501000103"><img width="20" height="20" src="{% static '/media/whatsapp.png' %}" alt="img"></a>
+					</div>
+				</div>
+				<div class="hours">
+					<h2><i>Рабочие часы</i></h2>
+					<p>Monday-Friday <br>08:30 am -07:00 pm</p>
+					<p>Saturday-Sunday <br>08:30am -06:00 pm</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
